@@ -4,8 +4,25 @@ using UnityEngine;
 
 public class gameManageFunc : MonoBehaviour
 {
+    [HideInInspector]
+    public static gameManageFunc singleton;
+
     public windowScript[] Windows = new windowScript[4];
 
+
+    void Awake() // for setting the singleton
+    {
+        if( singleton == null)
+        {
+            singleton = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
