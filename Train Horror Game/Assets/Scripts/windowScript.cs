@@ -42,7 +42,10 @@ public class windowScript : MonoBehaviour
         currentSound += x;
     }
 
-    public void getSound();
+    public void getSound()
+    {
+        
+    }
     private void playerDeath()
     {
 

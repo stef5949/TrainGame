@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\gameManageFunc.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\windowScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/GitHub/TrainGame/Train Horror Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
