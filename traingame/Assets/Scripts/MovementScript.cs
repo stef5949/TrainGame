@@ -21,11 +21,9 @@ public class MovementScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
             {rigidbody.AddForce(new Vector2(speed, 0)*Time.deltaTime,ForceMode2D.Force);
-            //gameObject.transform.Translate(new Vector3(speed, 0,0) * Time.deltaTime);
             }
         if (Input.GetKey(KeyCode.A))
             {rigidbody.AddForce(new Vector2(-speed, 0)* Time.deltaTime,ForceMode2D.Force);
-            //gameObject.transform.Translate(new Vector3(-speed, 0,0) * Time.deltaTime);
             }
 
         print(rigidbody.velocity);
