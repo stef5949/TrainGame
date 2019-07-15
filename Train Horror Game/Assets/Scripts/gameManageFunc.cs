@@ -16,9 +16,24 @@ public class gameManageFunc : MonoBehaviour
     // Update is called once per frame
    public void LateUpdate()
     {
-        for(int i = 0; i < Windows.Length; i++)
+        soundBehaviour();
+    }
+
+
+    void soundBehaviour()
+    {
+        int soundcheck = 0;
+        int wID = 0;
+        for (int i = 0; i < Windows.Length; i++)
         {
-           
+            int newSound = Windows[i].GetComponent<windowScript>().getSound();
+            if (newSound > soundcheck)
+            {
+                soundcheck = newSound;
+                wID = i;
+            }
         }
+        Windows[wID].GetComponent<windowScript>().monsterTrigger();
+        
     }
 }

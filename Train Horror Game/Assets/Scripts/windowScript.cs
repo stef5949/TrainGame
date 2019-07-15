@@ -20,16 +20,18 @@ public class windowScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         playerHere = true;
+        if(maxSound == currentSound)
+        { playerDeath(); }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        playerHere = false;   
+        playerHere = false;
     }
 
     public void monsterTrigger()
     {
-        if(playerHere)
+        if (playerHere)
         {
             playerDeath();
         }
@@ -42,13 +44,13 @@ public class windowScript : MonoBehaviour
         currentSound += x;
     }
 
-    public void getSound()
-    {
-        
+    public int getSound() {
+
+        return currentSound;
     }
     private void playerDeath()
     {
-
+      // player death code goes here
 
     }
 
